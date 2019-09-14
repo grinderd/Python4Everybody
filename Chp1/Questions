@@ -1,0 +1,49 @@
+#This is responding to the questions for Chapter 1
+
+#1. What is the function of secondary memorey in a computer?
+
+#c. Store information over the long term, even beyond the power cycle
+#This is the hard drive as opposed to RAM
+
+#2. What is the a program?
+#A series of instructions for the CPU on a computer.  A recipe for a descired particular outcome.
+
+#3. What is the different between a compiler and a interpreter?
+#The compiler take code and transforms it directly into machine code.  It is transforming code directly to machine code.
+# Compilers have to be specific to the hardware The interpreter transforms the code into precompiled code.
+
+#4. Which of the following contain "machine code"?
+#b. Keyboard
+
+#5. What is wrong with the following code:
+
+print 'Hello world!'
+
+#It is missing the parenthesis.  Proper code would be:
+
+print("Hello world!")
+
+#6. Where in the computer is a variable such as "x" stored after teh following Python line finishes?
+
+x = 123
+
+#b. Main memory
+
+#7. What will the following program print out:
+
+x = 43
+x = x+1
+print(x)
+
+#b. 44
+
+#8. Explain each of the following using an example of human capability:
+# (1) Central Processing unit = Brain Stem
+# (2) Main Memory  = Reflexes/muscle memory/intuition
+# (3) Second Memory = Brain memory
+# (4) Input Device = Eyes
+# (5) Output Device = Voice, limbs
+
+#9 How do you fix a Syntax Error?
+# Look for a coding mistake which come from putting the right typing in the right order (parenthesis, commas, etc.)
+
