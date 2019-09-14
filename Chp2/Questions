@@ -1,0 +1,38 @@
+#2 Write a program that uses input to prompt a user for their name and then welcomes them:
+
+name = input("Enter your name:")
+print("Welcome", name)
+
+#3. Write a program to prompt the user for hours and rate per hour to compute gross pay.
+
+hrs = input("Enter Hours:")
+hrs = float(hrs)
+rate = input("Enter Pay Rate:")
+rate = float(rate)
+grspay = hrs*rate
+print("Gross Pay:", hrs*rate)
+
+#4. Assume that we execute the following assignment statements:
+
+width = 17
+height = 12.0
+
+#For each of the following experessions, write the value of the expression and the type (of the value of the expression).
+
+#1. width//2
+8
+#2. width/2.0
+8.5
+#3. height /3
+4.0
+#4. 1+2*5
+11
+
+
+#5. Write a program which prompts the user for a Celsius temperature, convert the temperature to Fahrenheit, and print
+# out the converted tempurature.
+
+cTemp = input("Enter Celcius Temperaure:\n")
+fTemp = 9/5*cTemp +32
+
+print("Temperature in Farenheight: ", fTemp)
