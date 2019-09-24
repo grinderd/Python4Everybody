@@ -1,0 +1,12 @@
+#computepay function: The intent is to compute the pay given base rate and hours worked.
+
+def computepay(rate, hours):
+    if hours > 40:
+        grosspay = 40*rate + 1.5*(hours -40)*rate
+    else:
+        grosspay = hours*rate
+
+    return grosspay
+
+
+computepay(rate = 10, hours= 45)

@@ -1,0 +1,17 @@
+#Exercise 4: What is the purpose of the "def" keyword in Python?
+#d. It indicates the start of the function and It indicates that the following indented sectionf ocode is to be stored for later
+
+#Exercose 5: What will the following Python program print out?
+
+def fred():
+    print("Zap")
+
+def jane():
+    print("ABC")
+
+jane()
+fred()
+jane()
+
+#d.  ABC Zap ABC
+
