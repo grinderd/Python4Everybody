@@ -1,0 +1,21 @@
+#grade: function to assign grades using a function:
+
+def grade(percent):
+    try:
+        scr = float(percent)
+    except:
+        "Bad Input"
+    if type(grade) !=
+
+    if percent >= 0.9:
+        G = "A"
+    elif percent >= 0.8:
+        G = "B"
+    elif percent >= 0.7:
+        G = "C"
+    elif percent >= 0.6:
+        G = "D"
+    else:
+        G = "F"
+
+grade(0.95)
