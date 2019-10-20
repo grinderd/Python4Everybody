@@ -4,26 +4,47 @@ total, count, and average of the numbers.  If the user enters anything other tha
 try and except and print an error message and skip to the next number.
 '''
 
-margin = 0
+margin = None
+#stored_mx = None
+#stored_mn = None
 total = 0
 count = 0
 track = []
 
+first_run = 1
+
 while margin != 'done':
+    #Asks users for a number or to end the sequence
     margin = input("Enter a number. If complete please enter done. \n")
-    if lower(margin) == 'done':
+
+    #Checks to see if entered some the kill commnad for the loop.
+    if margin.lower() == 'done':
        break
     else:
         try:
-            float(margin)
+            margin = float(margin)
+
         except ValueError:
             print("Please enter a numeric value or done.")
 
         else:
+            #This is meant to initialize the max and min variable on the first pass
+            if first_run == 1:
+                first_run = 0
+                stored_mx = margin
+                stored_mn = margin
+
             count = count+1
             total = total + margin
+            if margin > stored_mx:
+                stored_mx = margin
+            if margin < stored_mn:
+                stored_mn = margin
+            track.append(margin)
 
 avg = total/count
-print("There were %d numbers entered." % count)
-print("The total of the numbers entered was %d." % total)
-print("The average of the numbers entered is %d." % avg)
+print("There were %d numbers entered.\n" % count)
+print("The total of the numbers entered was %d.\n" % total)
+print("The average of the numbers entered is %d.\n" % avg)
+print("The minimum value is %d and the maximum is %d.\n" % (stored_mn, stored_mx))
+print("The numbers entered were:\n", track)
