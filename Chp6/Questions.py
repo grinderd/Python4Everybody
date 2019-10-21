@@ -6,7 +6,7 @@ character in the string, printing each letter on a separate line, except backwar
 inputstring = input("Please write a string")
 
 index = 1
-while index < len(inputstring):
+while index < len(inputstring)+1:
     print(inputstring[(-1)*index])
     index = index +1
 
@@ -40,7 +40,7 @@ https://docs.python.org/library/stdtypes.html#string-methonds
 Write an invocation that counts the number of times the letter a occurs in "banana". 
 '''
 
-banana.count('a')
+'banana'.count('a')
 
 
 '''
