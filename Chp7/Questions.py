@@ -62,7 +62,7 @@ tlt_conf = 0
 for line in fcon:
     if not line.lower().startswith('x-dspam-confidence:'):
         continue
-    print(line)
+    #print(line)
     conf = line[(line.find(':')+1):]
     conf = float(conf)
     tlt_conf = tlt_conf + conf
@@ -71,10 +71,53 @@ for line in fcon:
 
 avgconf = tlt_conf/count*1.0
 
-print(tlt_conf)
-print(count)
+#print(tlt_conf)
+#print(count)
 print("The average confidence is %f." % avgconf)
 
+'''
+Exercise 3: Sometimes when programmers get bored or want to have a
+bit of fun, they add a harmless Easter Egg to their program. Modify
+the program that prompts the user for the file name so that it prints a
+funny message when the user types in the exact file name “na na boo
+boo”. The program should behave normally for all other files which
+exist and don’t exist. Here is a sample execution of the program:
 
+'''
+
+confid = input("Please enter a valid file name:")
+
+filename = 0
+while filename == 0:
+    try:
+        if confid == "done":
+            exit()
+        if confid == "na na boo boo":
+            print("I find you lack of seriousness disturbing.")
+            exit()
+
+        fcon = open(confid)
+    except FileNotFoundError:
+        print("\nThe file name you entered \'%s\' is invalid.\n" % confid)
+        confid = input("Please enter a valid file name:")
+    else:
+        filename = 1
+count = 0
+tlt_conf = 0
+for line in fcon:
+    if not line.lower().startswith('x-dspam-confidence:'):
+        continue
+    #print(line)
+    conf = line[(line.find(':')+1):]
+    conf = float(conf)
+    tlt_conf = tlt_conf + conf
+    count = count +1
+    print("Total:", tlt_conf)
+
+avgconf = tlt_conf/count*1.0
+
+#print(tlt_conf)
+#print(count)
+print("The average confidence is %f." % avgconf)
 
 
