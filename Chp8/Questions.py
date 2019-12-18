@@ -77,6 +77,14 @@ Enter file: romeo.txt
 'sun', 'the', 'through', 'what', 'window',
 'with', 'yonder']
 '''
+
+ff = input("Enter File Name:")
+
+try:
+    fhand = open(ff)
+except:
+    print("File {} doesn't exist.  Please type again.")
+
 '''
 Exercise 5: Write a program to read through the mail box data and
 when you find line that starts with “From”, you will split the line into
