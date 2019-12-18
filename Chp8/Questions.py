@@ -82,8 +82,18 @@ ff = input("Enter File Name:")
 
 try:
     fhand = open(ff)
-except:
-    print("File {} doesn't exist.  Please type again.")
+except FileNotFoundError:
+    print("File {} doesn't exist.  Please type again.".format(ff))
+    exit()
+wrds = []
+for line in fhand:
+    hld = line.split()
+    for wd in hld:
+        if wd in wrds:
+            wrds.append(wd)
+
+wrds.sort()
+
 
 '''
 Exercise 5: Write a program to read through the mail box data and
