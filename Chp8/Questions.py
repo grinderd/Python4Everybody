@@ -124,17 +124,21 @@ There were 27 lines in the file with From as the first word
 
 '''
 
+
 ff = input("Input File Name:")
 
 try:
     fhand = open(ff)
 except FileNoteFoundError:
     print("The file you typed \' {} \' was not found.".format(ff))
-
+cnt = 0
 for line in fhand:
     if len(line) > 0 and line.startswith('From'):
         hld = line.split()
         print(hld[1])
+        cnt += 1
+
+print("There are {} lines begining with 'From' in the {} file.".format(cnt,ff))
 
 
 
@@ -153,3 +157,19 @@ Enter a number: done
 Maximum: 9.0
 Minimum: 2.0
 '''
+
+lst_hld = []
+while(complete = 0):
+    num = input(Enter a number:)
+    if num = "done":
+        mx = max(lst_hld)
+        mn = min(lst_hld)
+        print('Maximum: {}'.format(mx))
+        print('Minimum: {}'.format(mn))
+        exit()
+    try:
+        float(num)
+    except NameError:
+        print("You didn't enter a number")
+
+    lst_hld.append(hum)
